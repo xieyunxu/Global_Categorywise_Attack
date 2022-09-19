@@ -5,10 +5,10 @@ This document provides tutorials of Global Catergory-wise Attack (GCA).
 Basically it contains two parts:
 1) The installation procedures of the target network CenterNet, more details can be found at [Object as Points](http://arxiv.org/abs/1904.07850)
 2) The installation procedures of GCA.
-3) Make sure you have finished [Installation Procedures](INSTALL.md) and [Datasets](DATA.md) before started.
+3) Make sure you have finished [Installation Procedures](/readme/INSTALL.md) and [Datasets](/readme/DATA.md) before started.
 
 ## Networks download 
-Download the models you want to evaluate from the [model zoo](MODEL_ZOO.md) and put them in `Root_File/models/`. 
+Download the models you want to evaluate from the [model zoo](/readme/MODEL_ZOO.md) and put them in `Root_File/models/`. 
 
 ##Evaluation
 ### Detection
