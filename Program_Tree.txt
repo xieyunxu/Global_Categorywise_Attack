@@ -1,0 +1,54 @@
+Global Category-wise Attack
+├─ data
+├─ exp
+│    ├─ ctdet
+│    └─ multi_pose
+├─ experiments
+│    └─ my_exp_GCA.sh
+├─ images
+│    ├─ 1.jpg
+│    ├─ 2.jpg
+│    ├─ 3.jpg
+│    ├─ 4.jpg
+│    └─ 5.jpg
+├─ outputs
+├─ readme
+│    ├─ (READ_ME_FIRST) _Get_Started.md
+│    ├─ DATA.md
+│    ├─ DEVELOP.md
+│    ├─ INSTALL.md
+│    ├─ MODEL_ZOO.md
+│    └─ fig1.png
+├─ requirements.txt
+└─ src
+       ├─ __pycache__
+       │    └─ _init_paths.cpython-36.pyc
+       ├─ _init_paths.py
+       ├─ demo.py
+       ├─ lib
+       │    ├─ __pycache__
+       │    ├─ datasets
+       │    ├─ detectors
+       │    ├─ external
+       │    ├─ logger.py
+       │    ├─ models
+       │    ├─ opts.py
+       │    ├─ trains
+       │    └─ utils
+       ├─ main.py
+       ├─ test_universal.py
+       └─ tools
+              ├─ _init_paths.py
+              ├─ calc_coco_overlap.py
+              ├─ convert_hourglass_weight.py
+              ├─ convert_kitti_to_coco.py
+              ├─ eval_coco.py
+              ├─ eval_coco_hp.py
+              ├─ get_kitti.sh
+              ├─ get_pascal_voc.sh
+              ├─ kitti_eval
+              ├─ merge_pascal_json.py
+              ├─ reval.py
+              ├─ vis_pred.py
+              ├─ voc
+              └─ voc_eval_lib
