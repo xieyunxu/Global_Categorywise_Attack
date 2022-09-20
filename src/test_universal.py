@@ -105,24 +105,10 @@ def test(opt):
       ret = detector.run(img_path,1,noise_tot)
       noise = ret['noise']
       noise_tot += noise
-      #noise_total_ = noise_tot[0].cpu().numpy()
-      #'mean': [0.408, 0.447, 0.470], 'std': [0.289, 0.274, 0.278],
-      p_mean = np.array([0.408, 0.447, 0.470],
-                        dtype=np.float32).reshape(3, 1, 1)
-      p_std = np.array([0.289, 0.274, 0.278],
-                       dtype=np.float32).reshape(3, 1, 1)
-      #noise_total_ = (noise_total_ * p_std + p_mean)*255
-      # print('L2 norm of pertubation:{} '.format(p2))
       print('---processing (pertubation iterating)--the {} th in {} th iter_round---'.format(ind, iter))
-    p_mean = np.array([0.408, 0.447, 0.470],
-                    dtype=np.float32).reshape(3, 1, 1)
-    p_std = np.array([0.289, 0.274, 0.278],
-                   dtype=np.float32).reshape(3, 1, 1)
   noise_total_ = noise_tot[0].cpu().numpy()
-      #noise_total_ = (noise_total_ * p_std + p_mean) * 255
   norm = (np.linalg.norm(noise_total_[0]) + np.linalg.norm(noise_total_[1]) + np.linalg.norm(noise_total_[2])) / (
           512 * 512)
-  print('L2 norm of pertubation:{} '.format(norm))
   noise_tot = noise_tot / norm * 0.001
 
   noise_tot_ = noise_tot.detach().cpu().numpy().squeeze(0).transpose(1, 2, 0)
@@ -138,7 +124,6 @@ def test(opt):
   time_stats = ['tot', 'load', 'pre', 'net', 'dec', 'post', 'merge']
   avg_time_stats = {t: AverageMeter() for t in time_stats}
 
-# test uni
   for ind in range(num_iter_test):
     img_id = dataset.images[ind]
     img_info = dataset.coco.loadImgs(ids=[img_id])[0]
